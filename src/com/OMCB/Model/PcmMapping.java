@@ -1,11 +1,9 @@
 package com.OMCB.Model;
 
-/**
- * Created by atchowdhury on 11/1/2015.
- */
 public class PcmMapping {
 
-    private String oldPCM="";
+    private String oldPCM = "";
+
     public String getOldPCM() {
         return oldPCM;
     }
@@ -22,7 +20,6 @@ public class PcmMapping {
         this.targetPCM = targetPCM;
     }
 
-    private String targetPCM="";
-
+    private String targetPCM = "";
 
 }

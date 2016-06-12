@@ -1,10 +1,8 @@
 package com.OMCB.Model;
 
-/**
- * Created by atchowdhury on 10/29/2015.
- */
 public class CSDAP {
-    private String BSC="";
+
+    private String BSC = "";
 
     public String getBSC() {
         return BSC;
@@ -14,7 +12,7 @@ public class CSDAP {
         this.BSC = BSC;
     }
 
-    private String CSDAP="";
+    private String CSDAP = "";
 
     public String getCSDAP() {
         return CSDAP;
@@ -24,7 +22,7 @@ public class CSDAP {
         this.CSDAP = CSDAP;
     }
 
-    private String PLMN="";
+    private String PLMN = "";
 
     public String getPLMN() {
         return PLMN;
@@ -34,8 +32,7 @@ public class CSDAP {
         this.PLMN = PLMN;
     }
 
-
-    private String bcfAbisIF="";
+    private String bcfAbisIF = "";
 
     public String getBcfAbisIF() {
         return bcfAbisIF;
@@ -45,8 +42,7 @@ public class CSDAP {
         this.bcfAbisIF = bcfAbisIF;
     }
 
-    private String bcfTslShift="";
-
+    private String bcfTslShift = "";
 
     public String getBcfTslShift() {
         return bcfTslShift;
@@ -56,9 +52,7 @@ public class CSDAP {
         this.bcfTslShift = bcfTslShift;
     }
 
-
-private String firstTSL="";
-
+    private String firstTSL = "";
 
     public String getFirstTSL() {
         return firstTSL;
@@ -68,8 +62,7 @@ private String firstTSL="";
         this.firstTSL = firstTSL;
     }
 
-    private String lastTSL="";
-
+    private String lastTSL = "";
 
     public String getLastTSL() {
         return lastTSL;
@@ -79,8 +72,7 @@ private String firstTSL="";
         this.lastTSL = lastTSL;
     }
 
-
-    private String pcmCircuit_ID="";
+    private String pcmCircuit_ID = "";
 
     public String getPcmCircuit_ID() {
         return pcmCircuit_ID;

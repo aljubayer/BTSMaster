@@ -2,16 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.OMCB.Model;
 
-/**
- *
- * @author atchowdhury
- */
 public class BSC {
 
-    private String BSC=null;
+    private String BSC = null;
 
     public String getBSC() {
         return BSC;
@@ -21,7 +16,7 @@ public class BSC {
         this.BSC = BSC;
     }
 
-    private String Name=null;
+    private String Name = null;
 
     public String getName() {
         return Name;

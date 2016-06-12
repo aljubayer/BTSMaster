@@ -1,6 +1,5 @@
 package com.OMCB;
 
-
 import com.OMCB.Model.AutomatedTelnetClient;
 import com.OMCB.Model.BCF;
 
@@ -27,10 +26,10 @@ import org.xml.sax.SAXException;
 public class SiteMaster {
 
     public static void main(String[] args) throws SQLException, IOException, NoSuchFieldException, ParserConfigurationException, SAXException, XMLStreamException, FileNotFoundException, DocumentException, ParseException {
-	// write your code here
+
         System.out.println("Site Master Executing.....");
 
-        ReadInputFile aInputReader=new ReadInputFile();
+        ReadInputFile aInputReader = new ReadInputFile();
 
         aInputReader.ReadInput();
 

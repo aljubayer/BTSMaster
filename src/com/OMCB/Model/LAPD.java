@@ -1,4 +1,5 @@
 package com.OMCB.Model;
+
 import com.OMCB.DAL.FullSiteBCFManager;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,12 +15,9 @@ import javax.xml.stream.XMLStreamException;
 import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
-/**
- * Created by atchowdhury on 10/26/2015.
- */
 public class LAPD {
-private String Bsc="";
 
+    private String Bsc = "";
 
     public String getBsc() {
         return Bsc;
@@ -37,9 +35,9 @@ private String Bsc="";
         this.BCF = BCF;
     }
 
-    private String BCF="";
+    private String BCF = "";
 
-private String PLMN="";
+    private String PLMN = "";
 
     public String getPLMN() {
         return PLMN;
@@ -49,7 +47,7 @@ private String PLMN="";
         this.PLMN = PLMN;
     }
 
-private String LAPD="";
+    private String LAPD = "";
 
     public String getLAPD() {
         return LAPD;
@@ -59,7 +57,7 @@ private String LAPD="";
         this.LAPD = LAPD;
     }
 
-    private String abisSigChannelSubSlot="";
+    private String abisSigChannelSubSlot = "";
 
     public String getAbisSigChannelSubSlot() {
         return abisSigChannelSubSlot;
@@ -69,8 +67,7 @@ private String LAPD="";
         this.abisSigChannelSubSlot = abisSigChannelSubSlot;
     }
 
-
-    private String bitRate="";
+    private String bitRate = "";
 
     public String getBitRate() {
         return bitRate;
@@ -80,8 +77,7 @@ private String LAPD="";
         this.bitRate = bitRate;
     }
 
-    private String abisSigChannelTimeSlotPcm="";
-
+    private String abisSigChannelTimeSlotPcm = "";
 
     public String getAbisSigChannelTimeSlotPcm() {
         return abisSigChannelTimeSlotPcm;
@@ -91,7 +87,7 @@ private String LAPD="";
         this.abisSigChannelTimeSlotPcm = abisSigChannelTimeSlotPcm;
     }
 
-    private String abisSigChannelTimeSlotTsl="";
+    private String abisSigChannelTimeSlotTsl = "";
 
     public String getAbisSigChannelTimeSlotTsl() {
         return abisSigChannelTimeSlotTsl;
@@ -101,8 +97,7 @@ private String LAPD="";
         this.abisSigChannelTimeSlotTsl = abisSigChannelTimeSlotTsl;
     }
 
-    private String adminState="";
-
+    private String adminState = "";
 
     public String getAdminState() {
         return adminState;
@@ -112,8 +107,7 @@ private String LAPD="";
         this.adminState = adminState;
     }
 
-
-    private String dChannelType="";
+    private String dChannelType = "";
 
     public String getdChannelType() {
         return dChannelType;
@@ -123,7 +117,7 @@ private String LAPD="";
         this.dChannelType = dChannelType;
     }
 
-    private String logicalBCSUAddress="";
+    private String logicalBCSUAddress = "";
 
     public String getLogicalBCSUAddress() {
         return logicalBCSUAddress;
@@ -133,7 +127,7 @@ private String LAPD="";
         this.logicalBCSUAddress = logicalBCSUAddress;
     }
 
-    private String name="";
+    private String name = "";
 
     public String getName() {
         return name;
@@ -143,8 +137,7 @@ private String LAPD="";
         this.name = name;
     }
 
-
-    private String parameterSetNumber="";
+    private String parameterSetNumber = "";
 
     public String getParameterSetNumber() {
         return parameterSetNumber;
@@ -154,8 +147,7 @@ private String LAPD="";
         this.parameterSetNumber = parameterSetNumber;
     }
 
-    private String sapi="";
-
+    private String sapi = "";
 
     public String getSapi() {
         return sapi;
@@ -165,7 +157,7 @@ private String LAPD="";
         this.sapi = sapi;
     }
 
-    private String tei="";
+    private String tei = "";
 
     public String getTei() {
         return tei;
@@ -183,30 +175,23 @@ private String LAPD="";
         NewPCM = newPCM;
     }
 
-    private String NewPCM="";
+    private String NewPCM = "";
 
-
-    public void FetchLapdData(Map<String,Map<String,Map<String,String>>> aInputDictionary1) throws SQLException, ParserConfigurationException, SAXException, IOException, XMLStreamException, FileNotFoundException, DocumentException, ParseException {
-
+    public void FetchLapdData(Map<String, Map<String, Map<String, String>>> aInputDictionary1) throws SQLException, ParserConfigurationException, SAXException, IOException, XMLStreamException, FileNotFoundException, DocumentException, ParseException {
 
         Map<String, Map<String, Map<String, String>>> fullSiteSwapList = new HashMap<String, Map<String, Map<String, String>>>();
         Map<String, Map<String, Map<String, String>>> onlyTRXSwapList = new HashMap<String, Map<String, Map<String, String>>>();
-        //Map<String, Map<String, Map<String, String>>> onlyTRXSwapList = new HashMap<String, Map<String, Map<String, String>>>();
-
 
         String partSQL = "";
-        //String oldPcm="";
+
         List<BscBcfLapd> lapdBCFMappingList = new ArrayList<com.OMCB.Model.BscBcfLapd>();
 
         for (Map.Entry<String, Map<String, Map<String, String>>> amp : aInputDictionary1.entrySet()) {
 
-            // System.out.println(amp.getKey() + "/" + amp.getValue());
-
-
             for (Map.Entry<String, Map<String, Map<String, String>>> bscEntry : aInputDictionary1.entrySet()) {
                 String Bsc = bscEntry.getKey();
                 System.out.println(Bsc + "--->");
-                // ...
+
                 for (Map.Entry<String, Map<String, String>> bcfEntry : bscEntry.getValue().entrySet()) {
                     String Bcf = bcfEntry.getKey();
                     System.out.println(Bcf + "--->");
@@ -215,7 +200,6 @@ private String LAPD="";
                         BscBcfLapd lapdBCFmap = new BscBcfLapd();
                         lapdBCFmap.BSC = Bsc;
                         lapdBCFmap.BCF = Bcf;
-
 
                         String oldPcm = Pcm.getKey();
                         lapdBCFmap.PCM = oldPcm;
@@ -228,22 +212,17 @@ private String LAPD="";
 
                     }
 
-
                 }
-
 
             }
 
-
-            //for(Map.Entry<String,Map<String,String>> aMap:amp.entrySet()){}
         }
         partSQL = partSQL.substring(0, partSQL.length() - 2);
-       // System.out.println(partSQL);
+
         String Query = "select plmn,bsc,lapd,abisSigChannelSubSlot,bitRate,abisSigChannelTimeSlotPcm,abisSigChannelTimeSlotTsl,adminState,dChannelType,name,parameterSetNumber,sapi,tei from lapd where " + partSQL + "";
         DBConnection aDBConnection = new DBConnection();
-        JdbcRowSet aResultSet =
-                aDBConnection.SelectSql(Query);
-
+        JdbcRowSet aResultSet
+                = aDBConnection.SelectSql(Query);
 
         List<LAPD> lapdList = new ArrayList<LAPD>();
         while (aResultSet.next()) {
@@ -262,23 +241,18 @@ private String LAPD="";
             aLapd.setSapi(aResultSet.getString("sapi"));
             aLapd.setTei(aResultSet.getString("tei"));
 
-
             lapdList.add(aLapd);
-            // print the results
-            //  System.out.println("One Added");
 
         }
         aDBConnection.CloseConnection();
-
 
         List<LAPD> lapdBCFAllinfoList = new ArrayList<com.OMCB.Model.LAPD>();
         List<LAPD> sapi62OMUList = new ArrayList<com.OMCB.Model.LAPD>();
 
         for (LAPD lapd : lapdList) {
 
-
             for (BscBcfLapd lapdBCF : lapdBCFMappingList) {
-               // System.out.println(lapdBCF.BSC.trim() + " " + lapd.getBsc().trim());
+
                 if (lapdBCF.BSC.trim().equals(lapd.getBsc().trim()) && lapdBCF.PCM.trim().equals(lapd.getAbisSigChannelTimeSlotPcm().trim())) {
                     LAPD aLapd = new LAPD();
                     aLapd = lapd;
@@ -289,16 +263,12 @@ private String LAPD="";
                     }
                     lapdBCFAllinfoList.add(aLapd);
 
-
                 }
             }
 
         }
 
-//Map<String,String> otherSites=new HashMap<String, String>();
-
         for (LAPD sapiLapd : sapi62OMUList) {
-
 
             Map<String, String> aPcmmap = aInputDictionary1.get(sapiLapd.Bsc).get(sapiLapd.BCF);
             if (aPcmmap.size() > 0) {
@@ -306,31 +276,23 @@ private String LAPD="";
                     Map<String, Map<String, String>> aBcfPcmMap1 = new HashMap<String, Map<String, String>>();
                     aBcfPcmMap1.put(sapiLapd.BCF, aPcmmap);
                     fullSiteSwapList.put(sapiLapd.Bsc, aBcfPcmMap1);
-                } else {
-                    if(!fullSiteSwapList.containsKey(sapiLapd.Bsc)){
-                       Map<String, Map<String, String>> aBcfPcmMap1 = new HashMap<String, Map<String, String>>();
-                        aBcfPcmMap1.put(sapiLapd.BCF, aPcmmap);
-                        fullSiteSwapList.put(sapiLapd.Bsc, aBcfPcmMap1);
+                } else if (!fullSiteSwapList.containsKey(sapiLapd.Bsc)) {
+                    Map<String, Map<String, String>> aBcfPcmMap1 = new HashMap<String, Map<String, String>>();
+                    aBcfPcmMap1.put(sapiLapd.BCF, aPcmmap);
+                    fullSiteSwapList.put(sapiLapd.Bsc, aBcfPcmMap1);
 
-                    }
-                    else if (!fullSiteSwapList.get(sapiLapd.Bsc).containsKey(sapiLapd.BCF)) {
-                        Map<String, Map<String, String>> aBcfPcmMap1 = new HashMap<String, Map<String, String>>();
-                        aBcfPcmMap1.put(sapiLapd.BCF, aPcmmap);
-                        fullSiteSwapList.get(sapiLapd.Bsc).put(sapiLapd.BCF, aPcmmap);
-                    }
-                    // fullSiteSwapList.putAll(sapiLapd.Bsc, aBcfPcmMap1);
+                } else if (!fullSiteSwapList.get(sapiLapd.Bsc).containsKey(sapiLapd.BCF)) {
+                    Map<String, Map<String, String>> aBcfPcmMap1 = new HashMap<String, Map<String, String>>();
+                    aBcfPcmMap1.put(sapiLapd.BCF, aPcmmap);
+                    fullSiteSwapList.get(sapiLapd.Bsc).put(sapiLapd.BCF, aPcmmap);
                 }
             }
         }
 
+        FullSiteBCFManager aFullSiteBCFManager = new FullSiteBCFManager();
 
-      FullSiteBCFManager aFullSiteBCFManager=new FullSiteBCFManager();
-
-        aFullSiteBCFManager.CreateFullSiteXml(fullSiteSwapList,lapdBCFAllinfoList);
-        
+        aFullSiteBCFManager.CreateFullSiteXml(fullSiteSwapList, lapdBCFAllinfoList);
 
     }
-
-
 
 }

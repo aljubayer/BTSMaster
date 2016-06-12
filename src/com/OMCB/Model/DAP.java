@@ -1,11 +1,8 @@
 package com.OMCB.Model;
 
-/**
- * Created by atchowdhury on 10/28/2015.
- */
 public class DAP {
 
-    private String BSC="";
+    private String BSC = "";
 
     public String getBSC() {
         return BSC;
@@ -15,7 +12,7 @@ public class DAP {
         this.BSC = BSC;
     }
 
-    private String PLMN="";
+    private String PLMN = "";
 
     public String getPLMN() {
         return PLMN;
@@ -25,7 +22,7 @@ public class DAP {
         this.PLMN = PLMN;
     }
 
-    private String DAP="";
+    private String DAP = "";
 
     public String getDAP() {
         return DAP;
@@ -35,8 +32,7 @@ public class DAP {
         this.DAP = DAP;
     }
 
-
-    private String bcsuID="";
+    private String bcsuID = "";
 
     public String getBcsuID() {
         return bcsuID;
@@ -46,8 +42,7 @@ public class DAP {
         this.bcsuID = bcsuID;
     }
 
-    private String firstTSL="";
-
+    private String firstTSL = "";
 
     public String getFirstTSL() {
         return firstTSL;
@@ -57,7 +52,7 @@ public class DAP {
         this.firstTSL = firstTSL;
     }
 
-    private String lastTSL="";
+    private String lastTSL = "";
 
     public String getLastTSL() {
         return lastTSL;
@@ -67,8 +62,7 @@ public class DAP {
         this.lastTSL = lastTSL;
     }
 
-
-    private String pcmCircuit_ID="";
+    private String pcmCircuit_ID = "";
 
     public String getPcmCircuit_ID() {
         return pcmCircuit_ID;
@@ -78,7 +72,7 @@ public class DAP {
         this.pcmCircuit_ID = pcmCircuit_ID;
     }
 
-    private String pcuID="";
+    private String pcuID = "";
 
     public String getPcuID() {
         return pcuID;
@@ -87,6 +81,5 @@ public class DAP {
     public void setPcuID(String pcuID) {
         this.pcuID = pcuID;
     }
-
 
 }

@@ -2,9 +2,6 @@ package com.OMCB.Model;
 
 import java.util.*;
 
-/**
- * Created by atchowdhury on 10/26/2015.
- */
 public class BCF {
 
     public String getBSC() {
@@ -15,17 +12,19 @@ public class BCF {
         this.BSC = BSC;
     }
 
-    private String BSC=null;
+    private String BSC = null;
 
-    String BCF=null;
-    public void setBCF(String a){
-        this.BCF=a;
+    String BCF = null;
+
+    public void setBCF(String a) {
+        this.BCF = a;
     }
-    public String getBCF(){
+
+    public String getBCF() {
         return this.BCF;
     }
 
-private String distName=null;
+    private String distName = null;
 
     public String getDistName() {
         return distName;
@@ -35,7 +34,7 @@ private String distName=null;
         this.distName = distName;
     }
 
-    private String version=null;
+    private String version = null;
 
     public String getVersion() {
         return version;
@@ -53,8 +52,7 @@ private String distName=null;
         this.externalAlarmList = externalAlarmList;
     }
 
-
-    private String name=null;
+    private String name = null;
 
     public String getName() {
         return name;
@@ -64,8 +62,8 @@ private String distName=null;
         this.name = name;
     }
 
-
     private String adminState;
+
     public String getAdminState() {
         return adminState;
     }
@@ -74,7 +72,8 @@ private String distName=null;
         this.adminState = adminState;
     }
 
-    private String autoUnlAllowed=null;
+    private String autoUnlAllowed = null;
+
     public String getAutoUnlAllowed() {
         return autoUnlAllowed;
     }
@@ -83,7 +82,7 @@ private String distName=null;
         this.autoUnlAllowed = autoUnlAllowed;
     }
 
-    private String bcfHdlcIdList=null;
+    private String bcfHdlcIdList = null;
 
     public String getBcfHdlcIdList() {
         return bcfHdlcIdList;
@@ -93,9 +92,7 @@ private String distName=null;
         this.bcfHdlcIdList = bcfHdlcIdList;
     }
 
-
-    private String bcfType=null;
-
+    private String bcfType = null;
 
     public String getBcfType() {
         return bcfType;
@@ -105,11 +102,7 @@ private String distName=null;
         this.bcfType = bcfType;
     }
 
-
-
-    private String btsSiteSubtype=null;
-
-
+    private String btsSiteSubtype = null;
 
     public String getBtsSiteSubtype() {
         return btsSiteSubtype;
@@ -119,7 +112,7 @@ private String distName=null;
         this.btsSiteSubtype = btsSiteSubtype;
     }
 
-    private String clockSource=null;
+    private String clockSource = null;
 
     public String getClockSource() {
         return clockSource;
@@ -129,11 +122,9 @@ private String distName=null;
         this.clockSource = clockSource;
     }
 
+    List<ExternalAlarms> externalAlarmList = new ArrayList<ExternalAlarms>();
 
-    List<ExternalAlarms> externalAlarmList=new ArrayList<ExternalAlarms>();
-
-    private String flexiEdgeAdditional2E1T1Usage=null;
-
+    private String flexiEdgeAdditional2E1T1Usage = null;
 
     public String getFlexiEdgeAdditional2E1T1Usage() {
         return flexiEdgeAdditional2E1T1Usage;
@@ -143,8 +134,7 @@ private String distName=null;
         this.flexiEdgeAdditional2E1T1Usage = flexiEdgeAdditional2E1T1Usage;
     }
 
-    private String flexiEdgeTrsAbisGroomingUsage=null;
-
+    private String flexiEdgeTrsAbisGroomingUsage = null;
 
     public String getFlexiEdgeTrsAbisGroomingUsage() {
         return flexiEdgeTrsAbisGroomingUsage;
@@ -154,8 +144,7 @@ private String distName=null;
         this.flexiEdgeTrsAbisGroomingUsage = flexiEdgeTrsAbisGroomingUsage;
     }
 
-    private String lapdLinkName=null;
-
+    private String lapdLinkName = null;
 
     public String getLapdLinkName() {
         return lapdLinkName;
@@ -165,8 +154,7 @@ private String distName=null;
         this.lapdLinkName = lapdLinkName;
     }
 
-    private String rxDifferenceLimit=null;
-
+    private String rxDifferenceLimit = null;
 
     public String getRxDifferenceLimit() {
         return rxDifferenceLimit;
@@ -175,8 +163,7 @@ private String distName=null;
     public void setRxDifferenceLimit(String rxDifferenceLimit) {
         this.rxDifferenceLimit = rxDifferenceLimit;
     }
-    private String synchEnabled=null;
-
+    private String synchEnabled = null;
 
     public String getSynchEnabled() {
         return synchEnabled;
@@ -186,11 +173,10 @@ private String distName=null;
         this.synchEnabled = synchEnabled;
     }
 
-
-    private String csdapid1="0";
-    private String csdapid2="0";
-    private String csdapid3="0";
-    private String csdapid4="0";
+    private String csdapid1 = "0";
+    private String csdapid2 = "0";
+    private String csdapid3 = "0";
+    private String csdapid4 = "0";
 
     public String getCsdapid1() {
         return csdapid1;
@@ -224,4 +210,3 @@ private String distName=null;
         this.csdapid4 = csdapid4;
     }
 }
-
